@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table{
+            width: 500px;
+            height: 200px;
+            border: 3px solid black;
+        }
+        td{
+           
+
+        }
+        input{
+            width: 100px;
+            height: 60px;
+            background-color: palevioletred;
+            border-radius: 5px;
+        }
+        .box{
+            width: 500px;
+            height: 200px;
+        }
+        .widthmax{
+            width: 360px;
+            background-color: white;
+        }
+        /* *{
+            margin-top: 0;
+            margin-left: 0;
+        } */
+    </style>
+</head>
+<body >
+    <div class="box">
+    <div><h1 style="border: 1px solid black;text-align: center;background-color:palevioletred;border-radius: 10px;">Teq Cacl</h1></div>
+    <table>
+        <form action="" method="post">
+         <tr> <td colspan="3"><input type="text" name="" value="" id="result" class="widthmax"></td> 
+            <!-- <td><input type="button" name="" value="del/c"  id="" ></td> -->
+            <td><input type="button" name="" value="c" id=""  onclick="cal()" oc></td>
+        </tr>
+         <tr>
+            <td><input type="button" name="" value="1" id="" onclick=" return define(this)"></td>
+             <td><input type="button" name="" value="2" id=""   onclick=" return define(this)"></td>
+              <td><input type="button" name="" value="3" id=""  onclick=" return define(this)"></td>
+               <td><input type="button" name="" value="/" id=""  onclick=" return define(this)"></td> 
+         </tr>
+         <tr>
+             <td><input type="button" name="" value="4" id=""  onclick=" return define(this)"></td>
+              <td><input type="button" name="" value="5" id=""  onclick=" return define(this)"></td>
+               <td><input type="button" name="" value="6" id=""  onclick=" return define(this)"></td>
+                <td><input type="button" name="" value="-" id=""  onclick=" return define(this)"></td>
+         </tr>
+         <tr>
+             <td><input type="button" name="" value="7" id=""  onclick=" return define(this)"></td>
+              <td><input type="button" name="" value="8" id=""  onclick=" return define(this)"></td>
+               <td><input type="button" name="" value="9" id=""  onclick=" return define(this)"></td>
+                <td><input type="button" name="" value="+" id=""  onclick=" return define(this)"></td>
+         </tr>
+         <tr>
+             <td><input type="button" name="" value="clr" id=""  onclick=" return clr()"></td>
+              <td><input type="button" name="" value="0" id=""  onclick=" return define(this)"></td>
+               <td><input type="button" name="" value="=" id=""  onclick=" return calc()"></td>
+                <td><input type="button" name="" value="*" id=""  onclick=" return define(this)"></td>
+         </tr>
+         <!-- <tr>
+            <td><input type="button" value="%" onclick="return define(this)"></td>
+            <td><input type="button" value="." onclick="return define(this)"></td>
+            <td><input type="button" value="+/-" onclick="return define(this)"></td>
+            <td><input type="button" value="<-" onclick="return define(this)"></td>
+         </tr> -->
+
+        </form>
+    </table>
+</div>
+<script>
+    
+  
+    function define(x)
+    {
+    var result=document.getElementById("result")  
+    result.value+=x.value 
+    }
+    function calc()
+    {
+        var result=document.getElementById("result")
+        result.value=eval(result.value)
+    }
+    function cal()
+    {
+        var result=document.getElementById("result")
+        result.value=""
+    }
+    function clr()
+    {
+        var result=document.getElementById("result")
+        result.value=result.value.slice(0,result.value.length-1)
+    }
+</script>
+    
+</body>
+</html>
